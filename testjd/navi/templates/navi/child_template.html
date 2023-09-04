@@ -1,0 +1,14 @@
+{% extends 'navi/index.html' %}
+
+{% block div4 %}
+    <div class="div4">
+        <iframe id="course-iframe" src="{{ course.ppt }}" width="500" height="1200"></iframe>
+        <!-- Add the button -->
+        <button id="back-button">返回</button>
+        <button id="toggleButton">Toggle Content</button>
+        <!-- Hidden placeholder for the new <p> tag -->
+        <div id="replacementContent" style="display: none;">
+            <iframe src="{{ course.notes }}" width="500" height="1200"></iframe>
+        </div>
+    </div>
+{% endblock %}

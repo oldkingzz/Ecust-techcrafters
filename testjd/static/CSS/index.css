@@ -1,0 +1,305 @@
+.parent {
+display: grid;
+grid-template-columns: repeat(10, 1fr);
+grid-template-rows: repeat(10, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 11; }
+.div2 { grid-area: 2 / 1 / 11 / 3; }
+.div3 { grid-area: 2 / 3 / 11 / 7; }
+.div4 { grid-area: 2 / 7 / 11 / 11; }
+/*css 初始化 */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img { margin:0; padding:0; }
+fieldset, img,input,button { border:none; padding:0;margin:0;outline-style:none; }  /*去掉边框、去掉轮廓（比如输入框外面的蓝边框）*/
+
+/*去掉列表前面的圆点*/
+ul, ol {
+    list-style: none;
+}
+input { padding-top:0; padding-bottom:0;
+    font-family: "SimSun", "宋体", serif;}  /*字体一般是指定这两个*/
+select, input { vertical-align:middle;}
+select, input, textarea { font-size:12px; margin:0; }
+textarea { resize:none; } /*禁止文本输入框在右下角拖拽（因为拖动后会调整输入框大小）*/
+img {border:0;	vertical-align:middle; }  /* 去掉图片底侧默认的3像素空白缝隙*/
+
+/*公共类*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+html {
+    height: 100%;
+}
+.div1 {
+    background-color: #333;
+    overflow: auto;
+    position: fixed; /* 将导航栏固定在页面上 */
+    top: 0; /* 距离页面顶部的位置 */
+    left: 0; /* 距离页面左侧的位置 */
+    width: 100%; /* 导航栏的宽度占满整个页面 */
+    padding: 10px; /* 导航栏内边距 */
+    z-index: 110;
+}
+
+.div1 a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.guyizaiyouce{
+    float: right;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    position: relative;
+}
+.dropdown {
+    float: left;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: inherit;
+    margin: 0;
+    padding: 14px 16px;
+    overflow: auto;
+}
+
+.div1 a:hover, .dropdown:hover .dropbtn {
+    background-color: #ddd;
+    color: black;
+    overflow: auto;
+}
+
+.dropdown-content {
+    display:none;
+    position: relative;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 99;
+    overflow: auto;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.div2 {
+    margin: 2px;
+    padding: 1px;
+    border: 1px solid #b60a0a;
+    width: 80%;
+}
+.div2 a{
+
+}
+/*
+.tree-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.tree-menu li {
+    position: relative;
+}
+
+.tree-menu li::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -20px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #000;
+}
+
+.tree-menu li::after {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: -15px;
+    width: 0;
+    height: 100%;
+    border-left: 1px solid #000;
+}
+
+.tree-menu li:last-child::after {
+    height: 8px;
+}
+
+.tree-menu li ul {
+    display: none;
+}
+
+.tree-menu li:hover ul {
+    display: block;
+    margin-left: 10px;
+}
+*/
+ul.custom-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 自定义列表项样式 */
+ul.custom-list li {
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 鼠标悬停效果 */
+ul.custom-list li:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.02);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* 超链接样式 */
+ul.custom-list li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* 超链接悬停效果 */
+ul.custom-list li a:hover {
+  color: #007bff;
+}
+
+.div2 a {
+    color: #cc3300;
+    font-weight: bold;
+    text-decoration: underline;
+}
+#code-editor {
+    width: 100%;
+    height: 1000px;
+    font-size: 14px;
+}
+
+#demo{
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+}
+.div3{
+    width: 80%;
+}
+.div3 button {
+    color: #090909;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+    box-shadow: 6px 6px 12px #c5c5c5,
+    -6px -6px 12px #ffffff;
+}
+
+.div3 button:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5,
+    inset -4px -4px 12px #ffffff;
+}
+.div4{
+    width: 80%;
+}
+/* Add styles for the button */
+#toggleButton {
+background-color: #4CAF50; /* Green background color */
+color: white; /* White text color */
+padding: 10px 20px; /* Add padding to the button */
+font-size: 16px; /* Font size of the button text */
+border: none; /* Remove default button border */
+cursor: pointer; /* Change the cursor to a pointer when hovering over the button */
+border-radius: 5px; /* Add rounded corners to the button */
+}
+
+/* Add styles for the replacement content */
+#replacementContent {
+background-color: #f1f1f1; /* Light gray background color for the replacement content */
+padding: 10px; /* Add padding to the replacement content */
+border-radius: 5px; /* Add rounded corners to the replacement content */
+margin-top: 10px; /* Add some space between the button and the replacement content */
+display: none; /* Hide the replacement content initially */
+}
+
+.div5 {
+    width: 80%;
+}
+
+.div5 h1 {
+    text-align: center;
+}
+
+.div5 .post-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.div5 input,
+textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.div5 button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.div5 .post-list {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+
+.div5 .post {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.div5 .post h2 {
+    margin-top: 0;
+}
+
+.div5 .post button {
+    background-color: #007BFF;
+}

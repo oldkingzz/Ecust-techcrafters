@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ person_b.name }}的传记</title>
+</head>
+<body>
+    <h1>{{ person_b.name }}的传记</h1>
+    <p>{{ person_b.introduction }}</p>
+    {% if person_b.picture %}
+        <img src="{{ person_b.picture.url }}" alt="{{ person_b.name }} Picture" style="max-width: 20%; max-height: 20%;">
+    {% endif %}
+</body>
+</html>

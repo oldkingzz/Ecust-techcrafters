@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.navbar {
+    background-color: black;
+    text-align: center;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list li {
+    display: inline-block;
+    margin: 0 40px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: white; /* Changed text color to white */
+    font-weight: bold;
+    font-size: 28px;
+    transition: color 0.3s;
+}
+
+.nav-list li a:hover {
+    color: #007bff;
+}
+
+.book {
+    position: relative;
+    border-radius: 10px;
+    width: 220px;
+    height: 220px; /* Set height to match width for a square */
+    background-color: whitesmoke;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    -webkit-transform: preserve-3d;
+    -ms-transform: preserve-3d;
+    transform: preserve-3d;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #000;
+}
+
+
+.cover {
+    top: 0;
+    position: absolute;
+    background-color: lightgray;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform-origin: 0;
+    -ms-transform-origin: 0;
+    transform-origin: 0;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.book:hover .cover {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform: rotatey(-80deg);
+    -ms-transform: rotatey(-80deg);
+    transform: rotatey(-80deg);
+}
+
+p {
+    font-size: 20px;
+    font-weight: bolder;
+}
+.page-container{
+    display: flex;
+}
+.card-container-left {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 680px; /* Four cards of 220px each + three gaps of 20px */
+    margin: 20px 0 20px 0;
+    padding: 20px;
+}
+
+.card-container-right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 680px; /* Four cards of 220px each + three gaps of 20px */
+    margin: 20px 0 20px auto;
+    padding: 20px;
+}
+.title-container {
+    display: flex; /* 使用flex布局，使标题水平排列 */
+    justify-content: space-between; /* 将标题放在容器两侧 */
+    align-items: center; /* 垂直居中标题 */
+}
+
+/* CSS样式用于标题1 */
+.title1 {
+    font-size: 24px; /* 设置标题字体大小 */
+    color: #333; /* 设置标题颜色 */
+    margin: 10px 0; /* 设置标题的上下边距 */
+    text-align: left;
+}
+
+/* CSS样式用于标题2 */
+.title2 {
+    font-size: 24px; /* 设置标题字体大小 */
+    color: #333; /* 设置标题颜色 */
+    margin: 10px 0; /* 设置标题的上下边距 */
+    text-align: right;
+}
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}

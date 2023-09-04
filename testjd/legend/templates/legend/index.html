@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+     <link rel="stylesheet" type="text/css" href="{% static 'CSS/legend.css' %}">
+
+    <title>Navigation Bar</title>
+</head>
+<body>
+<nav class="navbar">
+    <ul class="nav-list">
+        <li><a href="#">人物</a></li>
+        <li><a href="#">专题</a></li>
+        <li><a href="#">宿命</a></li>
+        <li><a href="#">未来</a></li>
+    </ul>
+</nav>
+<div class="title-container">
+    <p class="title1">星界军战士</p>
+    <p class="title2">机械教</p>
+</div>
+<div class="page-container">
+    <div class="card-container-left">
+{% for person in people_a %}
+    <div class="book">
+        <p>&nbsp{{ person.name }}<br>{{ person.introduction }}</p>
+        <button>
+            <a href="{% url 'legend:legend_detail' person_name=person.name %}">阅读更多</a>
+        </button>
+        <div class="cover">
+            {% if person.picture %}
+                <img src="{{ person.picture.url }}" alt="{{ person.name }} Picture" style="max-width: 100%; max-height: 100%;">
+            {% endif %}
+        </div>
+    </div>
+{% endfor %}
+
+
+        <!--
+        <div class="book">
+            <p>Hello</p>
+            <div class="cover">
+                <p>Hover Me</p>
+            </div>
+        </div>
+-->
+
+    </div>
+    <div class="card-container-right">
+
+{% for person in people_b %}
+    <div class="book">
+        <p>&nbsp{{ person.name }}<br>{{ person.introduction }}</p>
+        <button>
+            <a href="{% url 'legend:legend_detail_mec' person_name=person.name %}">阅读更多</a>
+        </button>
+        <div class="cover">
+            {% if person.picture %}
+                <img src="{{ person.picture.url }}" alt="{{ person.name }} Picture" style="max-width: 100%; max-height: 100%;">
+            {% endif %}
+        </div>
+    </div>
+{% endfor %}
+
+
+    </div>
+</div>
+</body>
+</html>

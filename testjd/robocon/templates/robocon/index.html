@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+     <link rel="stylesheet" type="text/css" href="{% static 'CSS/robocon.css' %}">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'J/robocon.js' %}" defer></script>
+
+</head>
+<body>
+<style>
+
+  </style>
+<div class="parent">
+  {% block div1 %}
+  <div class="div1">
+
+          <a href="/mian">主页</a>
+          <div class="dropdown">
+              <button class="dropbtn">▼</button>
+              <div class="dropdown-content">
+                  <a href="#">子菜单1</a>
+                  <a href="#">子菜单2</a>
+                  <a href="#">子菜单3</a>
+              </div>
+          </div>
+          <a href="/navi/chap_1/">AI</a>
+        <!--
+          <div class="dropdown">
+              <button class="dropbtn">▼</button>
+              <div class="dropdown-content">
+                  <a href="#">子菜单4</a>
+                  <a href="#">子菜单5</a>
+                  <a href="#">子菜单6</a>
+              </div>
+          </div>
+          -->
+          <a href="/robocon">Robocon</a>
+        <!--
+          <div class="dropdown">
+              <button class="dropbtn">▼</button>
+              <div class="dropdown-content">
+                  <a href="#">子菜单7</a>
+                  <a href="#">子菜单8</a>
+                  <a href="#">子菜单9</a>
+              </div>
+          </div>
+          -->
+
+          <a href="/modumst">黄道地库</a>
+        <!--
+          <div class="dropdown">
+              <button class="dropbtn">▼</button>
+              <div class="dropdown-content">
+                  <a href="/modumst">模型管理</a>
+                  <a href="#">代码托管</a>
+
+              </div>
+      </div>
+      -->
+      </div>
+      {% endblock %}
+    <div class="div2">
+
+    <input type="search" class="search-box" placeholder="请输入搜索内容...">
+</div>
+</div>

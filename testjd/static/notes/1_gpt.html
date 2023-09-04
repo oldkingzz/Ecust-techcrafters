@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>1-chatgpt</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="chatgpt-prompt工程师">chatgpt prompt工程师</h1>
+<h3 id="引入">引入</h3>
+<p>在朝夕间，贵人所崇纳者，一则奇谋巧思之机，即名曰“ChatGPT”。嗟哉，斯端独具之妙机，乃机关巧妙之语言模型，居于襟袖，旁求博览。岂非智慧之灵，于文辞华章，犹宛如玉匣珠玑，妙品良材，尽揽诸子，兼瞻众宝。</p>
+<p>倚梦重来，笔走龙蛇之间，ChatGPT贞玉粲光，文思飞扬。凌云壮志，深藏经纶，光耀夜空，吐故纳新。状以妙文，推敲辞句，句句琅琅玉笔，章章叠叠香言。</p>
+<p>其心博爱，言辞温文，推心置腹，妙道悠长。文墨虽成，未尽其妙，静候君来，解玺开封。聆我言，垂询讯，ChatGPT之道，犹虞舜之治，儒家礼乐，芸芸众妙。</p>
+<p>殷虔仰望，昭彰鸿图，此乃人工智能之巅峰。弦歌思索，念及翘楚，ChatGPT之才，不可胜言，如登云端，瑰姿绝尘。</p>
+<p>斯奇瑰之ChatGPT，真知灼见，高冠博带，妙语连珠。愿青史留名，永载千秋。当君启之，智者如骛，与之相对，亦如琴瑟之谐。</p>
+<pre><code>---某特别不要脸的模型自述</code></pre>
+<p>但你说，未来会不会真有个职业叫做“大模型prompt调教师”？</p>
+<p>不管它有没有这个存在，我们首先要能灵活使用这个新晋的恐怖工具。有些人会说，chatgpt不就是个搜索引擎吗，它也许不值得那么多的关注。然而事实是，它的能力甚至被低估了，不过，它只有在得到合适的指示下才能发挥最大的作用。</p>
+<p>唠叨完了，接下来我将从以下几点说明chatgpt的使用。</p>
+<ol type="1">
+<li>它能干什么？</li>
+<li>它不能干什么</li>
+<li>如果高效的使用prompt</li>
+</ol>
+<h3 id="它能干什么">它能干什么？</h3>
+<p>也许你们也看过其他人使用chatgpt进行内容创作，也许会惊叹于它的能力，但实际上，目前大模型已经到了1750亿个参数了，但远未到极限。</p>
+<p>以下是常用的：</p>
+<ol type="1">
+<li>文字内容生成</li>
+<li>代码生成</li>
+<li>内容概述</li>
+<li>内容补全</li>
+</ol>
+<p>文字内容：</p>
+<p>需求：下午两点有场主题演讲，主题为“为什么要玩原神”</p>
+<p>prompt:</p>
+<pre><code>你好，我下午有场演讲。主题是&quot;为什么要玩原神&quot;。我的观点是，&#39;原神不是什么好东西，不要玩，建议和玩原神的保持距离&#39;.请给我提供一份演讲稿，100字以内.</code></pre>
+<p>“你好，我下午有场演讲”（首先，亮明目的会让gpt更好的分析问题）</p>
+<p>主题是”为什么要玩原神”
+(一定要将所有的标题用单双引号，三引号，书名号，括号等一切特殊符号框起来（哪个都行)）</p>
+<p>我的观点是，‘原神不是什么好东西，不要玩，建议和玩原神的保持距离’(这个不是必须，你可以亮明你的观点方便gpt产生倾向于你观点的回答)</p>
+<p>请给我提供一份演讲稿，100字以内
+(这个是任务提出，请务必在每个prompt的结尾加上具体任务，否则他可能生成不让你满意的答复)</p>
+<p>gpt回答:</p>
+<pre><code>
+尊敬的听众们，
+
+今天我想分享一些关于《原神》的看法。虽然这款游戏备受瞩目，但我认为我们应该谨慎对待。《原神》的吸引力在于其精美的画面和引人入胜的故事情节，但我们也应认识到其中可能潜在的问题。过度沉迷游戏可能导致时间浪费，与现实生活疏离，甚至产生经济压力。我希望大家保持理性，选择更有益身心健康的娱乐方式，与《原神》保持适度距离。谢谢！</code></pre>
+<p>代码生成</p>
+<p>需求：一个网站，网站上面有个按钮，当你按下按钮之后，会在网页上显示”常胜利，慕容光”</p>
+<p>prompt：</p>
+<pre><code>我现在在做一个网站，我的网站的功能是，有一个 &lt;button&gt;按钮和一个&lt;p&gt;标签，我想完成的任务是当我按下这个按钮的时候，会在&lt;p&gt;标签中出现&quot;常胜利，慕容光&quot;。请给我html代码，JavaScript代码和用于美化的css代码。同时要提供给我文件结构是什么样的</code></pre>
+<p>我现在在做一个网站（亮明身份让gpt更好的分析）</p>
+<p>我的网站的功能是，有一个 <code>&lt;button&gt;</code>按钮和一个
+<code>&lt;p&gt;</code>标签，我想完成的任务是当我按下这个按钮的时候，会在
+<code>&lt;p&gt;</code>标签中出现”常胜利，慕容光”。(提出你的需求)</p>
+<p>请给我html代码，JavaScript代码和用于美化的css代码。同时要提供给我文件结构是什么样的
+（将任务规定死，不然会使任务出现偏差）</p>
+<p>以上所述是几个例子，总之，对gpt的使用要注意：</p>
+<ol type="1">
+<li>声明你需求的领域</li>
+<li>特殊内容用”“等能框住的符号框起来</li>
+<li>一定要清楚告知gpt你需要的是什么（演讲文件，特定代码块）</li>
+</ol>
+<h3 id="它不能干什么">它不能干什么</h3>
+<ol type="1">
+<li>名词解释</li>
+<li>作为服务器中心运行</li>
+</ol>
+<p>切记，不要用chatgpt去回答你专业课的问题，切记。</p>
+<p>例：笔者曾经偷懒使用chatgpt回答我工程材料的问题，当时的问题我记得是“常用的淬火手段有哪些”，最后的答复我记得它把回火，淬火和正火混在了一起回答给我，我也顺理成章的在那次作业获得了b+（最低b+)</p>
+<p>其次，chatgpt在名词解释的时候可能会出现幻觉，而这种幻觉的欺骗能力非常可怕。比如我让他回答，什么是苹果科技公司，它的可能回答是美国的那家公司。</p>
+<p>但这时候你在让他回答什么是香蕉科技公司，它的回答可能就是…</p>
+<p><strong><em>chatgpt回答：苹果科技公司是美国一家知名科技公司，创造并销售创新的消费电子产品、计算机软件和在线服务。</em></strong></p>
+<p><strong><em>chatgpt回答：</em></strong></p>
+<p><em>很高兴能为你提供香蕉科技公司的简介：</em></p>
+<p><strong><em>香蕉科技公司是一家新兴的科技公司，其业务与苹果公司类似。公司致力于设计、开发和销售消费电子产品、计算机软件和在线服务。他们可能推出了类似于iPhone智能手机、iPad平板电脑、Mac个人电脑和Apple
+Watch智能手表等产品，并提供iOS和macOS等操作系统，以及数字内容平台和云服务等在线服务。香蕉科技公司以创新和高品质产品而获得关注，并可能在全球范围内积极扩展业务。</em></strong></p>
+<p>其次，chatgpt不能作为服务器运行。举个例子，你有你们学校的所有人的成绩，你想知道平均分</p>
+<p>正确做法:</p>
+<p>“你好，我现在有我们学校所有人的成绩，他们以{“姓名”:“成绩”}这样的格式存在，请给我写个python代码，这个代码可以帮我统计所有人成绩的平均分。</p>
+<p>错误做法：</p>
+<p>“你好，我现在有我们学校所有人的成绩，这是信息”<你复制黏贴过来的一大串信息>“”</p>
+<p>其实第二种做法有可能得到正确答案的，但可能性很低，因为chatgpt在需要分步进行的步骤上面有点瑕疵。</p>
+<h3 id="其他一些常用的tips">其他一些常用的tips</h3>
+<p>我们该怎么看待chatgpt？对于这个问题，我的回答是，将你看成项目经理，将它看成你手下有孩子要养的可怜996码农，你要狠狠的压榨它的剩余价值。因此，你要做的是分工。</p>
+<p>举个例子：你现在在用django（一个python的web框架）构建一个使用git作为分布式系统的项目管理网站。</p>
+<p>错误做法：</p>
+<pre><code>我现在在用django（一个python的web框架）构建一个使用git作为分布式系统的项目管理网站。给我代码</code></pre>
+<p>如果采用上述做法，chatgpt大概率会发疯，或者给你一个大纲。</p>
+<p>正确做法：</p>
+<p>第一步，列大纲</p>
+<p>prompt：</p>
+<pre><code>我现在在用django（一个python的web框架）构建一个使用git作为分布式系统的项目管理网站。请给我一个大纲，将这个任务分成若干模块</code></pre>
+<p>第二步，针对各个模块逐一实现（规定好接口）</p>
+<p>prompt:</p>
+<pre><code>我在用django写一个网站，请在&lt;div&gt;标签中实现一个按钮的功能，按钮的class=&quot;git_button&quot;，这个按钮的功能是调用git_view的函数。请给相应的html和css代码</code></pre>
+<p>第三步，测试</p>
+<p>prompt:</p>
+<pre><code>为什么你给我的&quot;&lt;chatgpt&gt;发癫给你的错误程序代码&quot;有问题啊，怎么解决</code></pre>
+</body>
+</html>
